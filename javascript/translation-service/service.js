@@ -72,8 +72,24 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    this.api.request(text)
-    if()
+    let requestNum = 0;
+    const performRequest = () => {
+      return new Promise((resolve, reject) => {
+        this.api.request(text, (error) => {
+          if (error) {
+            if (requestNum < 2) {
+              requestNum++;
+              performRequest().then(resolve).catch(reject);
+            } else {
+              reject(error);
+            }
+          } else {
+            resolve();
+          }
+        });
+      });
+    };
+    return performRequest();
   }
 
   /**
@@ -87,7 +103,17 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function');
+    return new Promise((resolve, reject) => {
+      this.api.fetch(text)
+        .then(({translation, quality}) => {
+          if(quality >= minQuality) {
+            resolve(translation);
+          } else {
+            reject(new QualityThresholdNotMet(text));
+          }
+        })
+    })
+    
   }
 }
 
