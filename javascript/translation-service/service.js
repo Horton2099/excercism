@@ -1,4 +1,7 @@
 /// <reference path="./global.d.ts" />
+
+import { NotAvailable } from "./errors";
+
 // @ts-check
 //
 // The lines above enable type checking for this file. Various IDEs interpret
@@ -27,20 +30,24 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-     
-      return new Promise(function (resolve, reject) {
-        this.api.fetch(text) 
-          .then(({ translation}) => {
+    return new Promise((resolve, reject) => {
+      this.api.fetch(text)
+        .then(({ translation }) => {
+          if (translation !== undefined) {
             resolve(translation);
-          })
-          .catch((error) => {
-            reject(error);
-          })
-      });
+          } else {
+            reject(new NotAvailableError());
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    }); 
+
     
     }
     
-  }
+  
 
   /**
    * Batch translates the given texts using the free service.
@@ -53,13 +60,18 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    if(texts.length === 0) {
-      return Promise.reject(new Error('BatchIsEmpty'));
-    }
-
-    const promises = texts.map((text) => this.free(text));
-
-    return Promise.all(promises);
+    return new Promise((resolve, reject) => {
+      if (texts.length === 0) {
+        reject(new BatchIsEmpty());
+        return;
+      }
+  
+      const promises = texts.map((text) => this.free(text));
+  
+      Promise.all(promises)
+        .then((translations) => resolve(translations))
+        .catch((error) => reject(error));
+    });
   }
 
   /**
@@ -73,6 +85,7 @@ export class TranslationService {
    */
   request(text) {
     let requestNum = 0;
+
     const performRequest = () => {
       return new Promise((resolve, reject) => {
         this.api.request(text, (error) => {
@@ -105,17 +118,36 @@ export class TranslationService {
   premium(text, minimumQuality) {
     return new Promise((resolve, reject) => {
       this.api.fetch(text)
-        .then(({translation, quality}) => {
-          if(quality >= minQuality) {
-            resolve(translation);
-          } else {
-            reject(new QualityThresholdNotMet(text));
-          }
-        })
+      .then(({translation, quality}) => {
+        if (quality >= minimumQuality) {
+          resolve(translation);
+        } else {
+          reject( new QualityThresholdNotMet(text));
+        }
+      })
+      .catch((error) => {
+        if (error instanceof NotAvailable) {
+          this.request(text)
+          .then(() => {
+            this.api.fetch(text)
+            .then(({translation, quality}) => {
+              if(quality >= minimumQuality) {
+                resolve(translation);
+              } else {
+                reject(new QualityThresholdNotMet(text));
+              }
+            })
+            .catch(reject);
+          })
+          .catch(reject);
+        } else {
+          reject(error);
+        }
+      })
     })
-    
   }
 }
+
 
 /**
  * This error is used to indicate a translation was found, but its quality does
@@ -149,3 +181,4 @@ Requested a batch translation, but there are no texts in the batch.
     );
   }
 }
+
