@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BirdWatcherTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T23:14:47" hostname="AVARI-PC" time="0.084">
+<testsuite name="BirdWatcherTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T23:18:03" hostname="AVARI-PC" time="0.078">
   <properties/>
-  <testcase name="The getCountForFirstDays method returns overall count when number of days is higher than array size" classname="BirdWatcherTest" time="0.084"/>
+  <testcase name="The getBusyDays method correctly returns zero in case of no busy days" classname="BirdWatcherTest" time="0.078"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
