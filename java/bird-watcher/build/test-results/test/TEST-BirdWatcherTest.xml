@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BirdWatcherTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T22:50:34" hostname="AVARI-PC" time="0.231">
+<testsuite name="BirdWatcherTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T22:58:45" hostname="AVARI-PC" time="0.078">
   <properties/>
-  <testcase name="The getToday method correctly returns today's counts" classname="BirdWatcherTest" time="0.231"/>
+  <testcase name="The incrementTodaysCount method correctly increments today's counts" classname="BirdWatcherTest" time="0.078"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

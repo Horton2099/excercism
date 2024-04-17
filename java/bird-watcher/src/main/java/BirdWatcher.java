@@ -16,7 +16,7 @@ class BirdWatcher {
     }
 
     public void incrementTodaysCount() {
-        throw new UnsupportedOperationException("Please implement the BirdWatcher.incrementTodaysCount() method");
+        birdsPerDay[birdsPerDay.length -1] = birdsPerDay[birdsPerDay.length -1] +1;
     }
 
     public boolean hasDayWithoutBirds() {
