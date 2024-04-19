@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LanguageListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-18T23:59:48" hostname="AVARI-PC" time="0.09">
+<testsuite name="LanguageListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-19T00:08:25" hostname="AVARI-PC" time="0.077">
   <properties/>
-  <testcase name="The count method returns the number of languages in the list" classname="LanguageListTest" time="0.09"/>
+  <testcase name="The isExciting method returns true when the list contains Kotlin" classname="LanguageListTest" time="0.077"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -25,10 +25,10 @@ public class LanguageList {
     }
 
     public boolean containsLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the containsLanguage() method");
+        return languages.contains(language);
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+        return languages.contains("Java") || languages.contains("Kotlin");
     }
 }
