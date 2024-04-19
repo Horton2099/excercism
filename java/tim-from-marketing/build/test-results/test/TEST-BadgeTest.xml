@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BadgeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-19T00:17:09" hostname="AVARI-PC" time="0.087">
+<testsuite name="BadgeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-19T00:30:39" hostname="AVARI-PC" time="0.085">
   <properties/>
-  <testcase name="Printing a badge for an employee" classname="BadgeTest" time="0.087"/>
+  <testcase name="Printing a badge for a new employee" classname="BadgeTest" time="0.085"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
