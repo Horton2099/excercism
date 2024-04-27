@@ -1,12 +1,19 @@
 public class ElonsToyCar {
+
+    private int totalDistanceDriven;
+
+    private int totalBattery;
+
     public static ElonsToyCar buy() {
         ElonsToyCar newCar;
         newCar = new ElonsToyCar();
+        newCar.totalDistanceDriven = 0;
+        newCar.totalBattery = 100;
         return newCar;
     }
 
     public String distanceDisplay() {
-        throw new UnsupportedOperationException("Please implement the ElonsToyCar.distanceDisplay()  method");
+        return "Driven " + totalDistanceDriven +" meters";
     }
 
     public String batteryDisplay() {
