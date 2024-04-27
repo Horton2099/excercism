@@ -2,7 +2,7 @@ public class ElonsToyCar {
 
     private int totalDistanceDriven;
 
-    private int totalBattery;
+    private int totalBattery = 100;
 
     public static ElonsToyCar buy() {
         ElonsToyCar newCar;
@@ -17,7 +17,8 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
-        throw new UnsupportedOperationException("Please implement the ElonsToyCar.batteryDisplay()  method");
+        return String.format("Battery at %d%%", totalBattery);
+//        return "Battery at " + totalBattery + "%";
     }
 
     public void drive() {

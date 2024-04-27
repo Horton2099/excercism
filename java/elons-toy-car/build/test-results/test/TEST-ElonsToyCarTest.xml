@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ElonsToyCarTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-27T17:09:49" hostname="AVARI-PC" time="0.08">
+<testsuite name="ElonsToyCarTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-27T18:14:53" hostname="AVARI-PC" time="0.074">
   <properties/>
-  <testcase name="The distanceDisplay method shows 0 meters message on a new car" classname="ElonsToyCarTest" time="0.08"/>
+  <testcase name="The batteryDisplay method shows full battery message on a new car" classname="ElonsToyCarTest" time="0.074"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
