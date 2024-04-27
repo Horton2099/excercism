@@ -1,6 +1,8 @@
 public class ElonsToyCar {
     public static ElonsToyCar buy() {
-        throw new UnsupportedOperationException("Please implement the (static) ElonsToyCar.buy()  method");
+        ElonsToyCar newCar;
+        newCar = new ElonsToyCar();
+        return newCar;
     }
 
     public String distanceDisplay() {
