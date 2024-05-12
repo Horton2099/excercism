@@ -17,11 +17,17 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
+        if (totalBattery == 0) {
+            return "Battery empty";
+        }
         return String.format("Battery at %d%%", totalBattery);
-//        return "Battery at " + totalBattery + "%";
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ElonsToyCar.drive()  method");
+        if(totalBattery > 0) {
+            totalDistanceDriven += 20;
+            totalBattery -= 1;
+        }
+
     }
 }
