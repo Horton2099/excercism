@@ -15,6 +15,8 @@ public class SalaryCalculator {
     }
 
     public double finalSalary(int daysSkipped, int productsSold) {
-        throw new UnsupportedOperationException("Please implement the SalaryCalculator.finalSalary() method");
+       double finalSal = 1000 * salaryMultiplier(daysSkipped) + bonusForProductsSold(productsSold);
+       double checkCap = (finalSal >= 2000) ? 2000 : finalSal;
+       return checkCap;
     } 
 }

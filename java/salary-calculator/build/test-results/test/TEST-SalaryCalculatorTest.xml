@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SalaryCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-16T20:25:26" hostname="AVARI-PC" time="0.081">
+<testsuite name="SalaryCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-16T20:33:26" hostname="AVARI-PC" time="0.08">
   <properties/>
-  <testcase name="The bonusForProductsSold method returns the right result" classname="SalaryCalculatorTest" time="0.081"/>
+  <testcase name="The finalSalary method returns the correct result capped at maximum salary" classname="SalaryCalculatorTest" time="0.08"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
