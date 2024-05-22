@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 class AppointmentScheduler {
     public LocalDateTime schedule(String appointmentDateDescription) {
@@ -13,11 +15,13 @@ class AppointmentScheduler {
     }
 
     public boolean isAfternoonAppointment(LocalDateTime appointmentDate) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.isAfternoonAppointment() method");
+        return appointmentDate.getHour() >= 12 && appointmentDate.getHour() < 18;
     }
 
     public String getDescription(LocalDateTime appointmentDate) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.getDescription() method");
+        return "You have an appointment on " + appointmentDate.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH) + ", " + appointmentDate.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH)
+                + " " + appointmentDate.getDayOfMonth() + ", " + appointmentDate.getYear() + ", at " + ((appointmentDate.getHour() % 12 == 0) ? 12 : appointmentDate.getHour() % 12) + ":" + ((appointmentDate.getMinute() < 10) ? "0" + appointmentDate.getMinute() : String.valueOf(appointmentDate.getMinute()) ) + ((appointmentDate.getHour() < 12) ? " AM." : " PM.");
+
     }
 
     public LocalDate getAnniversaryDate() {
