@@ -19,6 +19,6 @@ class CaptainsLog {
     }
 
     double randomStardate() {
-        throw new UnsupportedOperationException("Please implement the CaptainsLog.randomStardate() method");
+        return 41000.0 + random.nextDouble(1000);
     }
 }

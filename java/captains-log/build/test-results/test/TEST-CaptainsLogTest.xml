@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CaptainsLogTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-10T17:42:31" hostname="AVARI-PC" time="0.134">
+<testsuite name="CaptainsLogTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-10T17:47:16" hostname="AVARI-PC" time="0.084">
   <properties/>
-  <testcase name="Generated ship registry numbers are valid" classname="CaptainsLogTest" time="0.134"/>
+  <testcase name="Generated stardates are valid" classname="CaptainsLogTest" time="0.084"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
