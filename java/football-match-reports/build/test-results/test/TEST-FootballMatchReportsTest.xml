@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FootballMatchReportsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-10T18:18:52" hostname="AVARI-PC" time="0.08">
+<testsuite name="FootballMatchReportsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-10T18:24:37" hostname="AVARI-PC" time="0.079">
   <properties/>
-  <testcase name="The onField method returns the correct description of player with shirt number 11" classname="FootballMatchReportsTest" time="0.08"/>
+  <testcase name="The onField method throws IllegalArgumentException for negative shirt number" classname="FootballMatchReportsTest" time="0.079"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

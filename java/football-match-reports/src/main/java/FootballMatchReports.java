@@ -26,6 +26,7 @@ public class FootballMatchReports {
             case 11:
                 position = "right wing";
                 break;
+            default: throw new IllegalArgumentException();
         }
         return position;
     }
