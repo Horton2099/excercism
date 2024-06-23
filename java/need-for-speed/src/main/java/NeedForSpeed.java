@@ -10,10 +10,7 @@ class NeedForSpeed {
     }
 
     public boolean batteryDrained() {
-        if(totalBattery == 0) {
-            return true;
-        };
-        return false;
+        return totalBattery == 0 ? true : false;
     }
 
     public int distanceDriven() {
