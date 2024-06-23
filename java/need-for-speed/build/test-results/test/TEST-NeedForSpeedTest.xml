@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NeedForSpeedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-23T19:12:28" hostname="AVARI-PC" time="0.073">
+  <properties/>
+  <testcase name="The tryFinishCar method returns false when car cannot finish a race" classname="NeedForSpeedTest" time="0.073"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
