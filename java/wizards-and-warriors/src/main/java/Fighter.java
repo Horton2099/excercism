@@ -9,7 +9,7 @@ class Fighter {
     }
 }
 
-// TODO: define the Warrior class
+
     class Warrior extends Fighter {
 
         @Override
@@ -25,7 +25,7 @@ class Fighter {
             return fighter.isVulnerable() ? 10 : 6;
         }
 }
-// TODO: define the Wizard class
+
     class Wizard extends Fighter {
         private boolean activePrep = false;
     @Override
