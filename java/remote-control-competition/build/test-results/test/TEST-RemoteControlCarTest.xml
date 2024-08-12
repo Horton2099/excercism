@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RemoteControlCarTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-12T03:32:12" hostname="AVARI-PC" time="0.077">
+  <properties/>
+  <testcase name="The getRankedCars returns a list of multiple cars sorted by number of victories" classname="RemoteControlCarTest" time="0.077"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
